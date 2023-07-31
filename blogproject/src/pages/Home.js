@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
 
     const [postLists, setPostList] = useState([]);
+    let navigate = useNavigate();
 
     useEffect(() => {
         const getPosts = async () => {
@@ -14,6 +16,11 @@ function Home() {
         };
         getPosts();
     });
+
+    const commentfn = () => {
+        navigate("/comments");
+
+    };
     return <div className="homePage"> 
     {
         postLists.map((post) => {
@@ -23,14 +30,19 @@ function Home() {
 
             </div>
             <div className="postTextContainer"> {post.body} </div>
-            <h3>@{post.postAuthor} </h3>
+            <h3>@{post.postAuthor}  </h3>
+            <div className="comment-btn-right"><button onClick={commentfn}>Comments</button></div>
+                </div>
 
-            </div>
+            
+            
         }
 
         )
-
+        
     } 
+    
+
     </div>;
 }
 
