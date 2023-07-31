@@ -2,6 +2,7 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
+import Comments from "./pages/Comments";
 import CreatePost from './pages/CreatePost';
 import { useState } from 'react';
 import { signOut } from 'firebase/auth';
@@ -38,6 +39,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/createpost" element={<CreatePost isAuth={isAuth}/>} />
       <Route path="/login" element={<Login setIsAuth={setIsAuth}/>} />
+      <Route path="/comments" element={<Comments isAuth={isAuth}/>} />
     </Routes>
   </Router>
   );
