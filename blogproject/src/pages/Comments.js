@@ -50,7 +50,7 @@ return <div className="comment">
         
         <div className="inputCtsGp">
             
-            <textarea placeholder="Type here the comments" 
+            <textarea placeholder="Type here the comments..." 
             onChange={(event) => {
                 setaddComments(event.target.value);
             }}
@@ -62,6 +62,9 @@ return <div className="comment">
          {
         commentLists.map((comment) => {
             return <div className="comment">
+                <div className="comment-image-container">
+        <img src="/user-img.png" />
+      </div>
             <div className="comment-right-part">
                 <div className="comment-content">
                     <div className="comment-author">{comment.commentsAuthor} </div>

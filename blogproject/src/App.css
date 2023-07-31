@@ -301,7 +301,10 @@ textarea {
   margin-top: 5px;
 }
 
-
+.comment {
+  
+  margin-bottom: 28px;
+}
 
 .comment-right-part {
   width: 100%;
@@ -323,4 +326,14 @@ textarea {
 
 .comment-btn-right {
   text-align: right;
+}
+
+.comment-image-container {
+  margin-right: 2px;
+}
+
+.comment-image-container img {
+  border-radius: 1px;
+  width: 30px;
+  height: 30px;
 }
