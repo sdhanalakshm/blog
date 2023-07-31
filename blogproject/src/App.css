@@ -181,10 +181,10 @@ textarea {
     cursor: not-allowed;
   }
 }
-body {
+/*body {
   text-align: center;
   padding-top: 2rem;
-}
+}*/
 
 .homePage {
   width: 100%;
@@ -200,7 +200,7 @@ body {
   width: 600px;
   height: auto;
   max-height: 600px;
-  background-color: yellow;
+  background-color: white;
   box-shadow: rgba(0, 0, 0, .24) 0px 3px 8px;
   margin: 20px;
   padding: 20px;
@@ -242,3 +242,85 @@ body {
   color: blue;
 }
 
+.cpContainer {
+  width: 500px;
+  height: auto;
+  padding: 20px;
+  background-color: black;
+  border-radius: 12px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.cpContainer h1 {
+  text-align: center;
+}
+
+.cpContainer label {
+   font-size: 25px;
+}
+
+.cpContainer .inputGp {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputGp input,
+.inputGp textarea {
+  font-size: 18px;
+  border: none;
+  border-radius: 2px;
+  padding: 5px;
+}
+
+.inputCtsGp input{
+  height: 40px;
+}
+
+.inputCtsGp textarea {
+  height: 100px;
+  width: 400px;
+}
+
+.cpContainer button {
+  margin-top: 20px;
+  height: 40px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 20px;
+  color: black;
+  background-color: white;
+}
+
+input,
+textarea {
+  margin-top: 5px;
+}
+
+
+
+.comment-right-part {
+  width: 100%;
+}
+
+.comment-content {
+  display: flex;
+}
+
+.comment-author {
+  margin-right: 8px;
+  font-size: 20px;
+  color: rgb(59, 130, 246);
+}
+
+.comment-text {
+  font-size: 18px;
+}
+
+.comment-btn-right {
+  text-align: right;
+}
