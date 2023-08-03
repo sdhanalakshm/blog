@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { auth } from "../firebase-config"
+//import { auth } from "../firebase-config"
 import { useNavigate } from "react-router-dom";
 
 function Comments(){
@@ -17,7 +17,7 @@ function Comments(){
             {
                 "comments": addComments,
                 "post_id": 4,
-                "commentsAuthor": auth.currentUser.displayName
+                "commentsAuthor": localStorage.getItem("userName")
               }
             );
             console.log(response.data);

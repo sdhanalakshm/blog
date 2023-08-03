@@ -5,6 +5,7 @@ import Login from "./pages/Login";
 import MyBlog from "./pages/MyBlog";
 import Comments from "./pages/Comments";
 import CreatePost from './pages/CreatePost';
+import Register from './pages/Register';
 import { useState } from 'react';
 import { signOut } from 'firebase/auth';
 
@@ -43,6 +44,7 @@ function App() {
       <Route path="/createpost" element={<CreatePost isAuth={isAuth}/>} />
       <Route path="/login" element={<Login setIsAuth={setIsAuth}/>} />
       <Route path="/comments" element={<Comments isAuth={isAuth}/>} />
+      <Route path="/register" element={<Register />} />
     </Routes>
   </Router>
   );
