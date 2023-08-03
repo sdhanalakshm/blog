@@ -1,21 +1,23 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { auth } from "../firebase-config"
+//import { auth } from "../firebase-config"
 import { useNavigate } from "react-router-dom";
+//import user from "./Login";
 
 function CreatePost( {isAuth}) {
 const [title, setTitle] = useState("");
 const [postText, setPostText] = useState("");
+//const {userState, useContext} = useContext(user);
 
 let navigate = useNavigate();
-
+//const author = userState ? userState : auth.currentUser.displayName;
 const createPost = async () => {
     try{
         const response = await axios.post('https://localhost:44328/api/Blog/CreatePost',
         {
             "title": title,
             "body": postText,
-            "postAuthor": auth.currentUser.displayName
+            "postAuthor": localStorage.getItem("userName")
           }
         );
         console.log(response.data);
