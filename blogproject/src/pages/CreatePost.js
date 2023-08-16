@@ -7,7 +7,12 @@ import { useNavigate } from "react-router-dom";
 function CreatePost( {isAuth}) {
 const [title, setTitle] = useState("");
 const [postText, setPostText] = useState("");
-//const {userState, useContext} = useContext(user);
+
+// const [image, setImage] = useState(null);
+
+// const handleImageUpload = (event) => {
+//   setImage(event.target.files[0]);
+// };
 
 let navigate = useNavigate();
 //const author = userState ? userState : auth.currentUser.displayName;
@@ -57,6 +62,15 @@ useEffect(() => {
             }}
             />
         </div>
+        {/* <div>
+          <label htmlFor="image">Image:</label>
+          <input
+            type="file"
+            id="image"
+            accept="image/*"
+            onChange={handleImageUpload}
+          />
+        </div> */}
         <button onClick={createPost}>Submit Post</button>
         </div>
     </div>

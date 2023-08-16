@@ -46,7 +46,7 @@ return <div className="comment">
     
        <div className="cpCtsContainer">
         
-        <h3>Write Comments</h3>
+        <h3 style={{color: "blue"}}>Write Comments</h3>
         
         <div className="inputCtsGp">
             
@@ -56,7 +56,7 @@ return <div className="comment">
             }}
             />
         </div>
-        <button onClick={addCommentsfn}>Write</button>
+        <button className="write" onClick={addCommentsfn}>Write</button>
         </div>
 
          {

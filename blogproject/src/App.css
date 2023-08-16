@@ -13,12 +13,15 @@ nav {
   margin: 0;
   width: 100%;
   height: 80px;
-  background-color: #505050;
+  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: yellow;
+  color: blue;
   text-decoration: yellow;
+  font-style: italic;
+
+
 }
 
 a {
@@ -67,6 +70,7 @@ width: 100%;
 height: calc(100vh - 80px);
 display: grid;
 place-items: center;
+
 }
 
 .cpContainer {
@@ -78,11 +82,13 @@ place-items: center;
   color: blue;
   display: flex;
   flex-direction: column;
+  
 
 }
 
 .cpContainer h1 {
   text-align: center;
+  
 }
 
 .cpContainer label {
@@ -192,32 +198,48 @@ textarea {
   width: 100%;
   min-height: calc(100vh - 80px);
   height : auto;
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Two columns with equal width */
+  grid-gap: 20px; /* Space between the posts */
   align-items: center;
   padding-top: 20px;
+  background-color: lightblue;
+  
 }
 
 .homePage .post {
-  width: 600px;
-  height: auto;
+  width: 350px;
+  height: 250px;
   max-height: 600px;
-  background-color: white;
+  background-color: #f3d2d7;
   box-shadow: rgba(0, 0, 0, .24) 0px 3px 8px;
   margin: 20px;
   padding: 20px;
   border-radius: 15px;
+  
+  
 }
 
 .post .postHeader {
-  display: flex;
+   display: flex; 
+  
   justify-content: center;
   width: 100%;
+  
 }
+
+
 
 .postHeader .title {
   flex: 50px;
   color: purple;
+  text-transform: uppercase;
+  border-radius: 15px;
+  text-align: center;
+  font-style: italic;
+  
 }
 
 .postHeader .deletePost {
@@ -236,12 +258,26 @@ textarea {
 
 .post .postTextContainer {
   word-wrap: break-word;
-  height: auto;
+  height: 150px;
   max-height: 400px;
   width: 100%;
   overflow: hidden;
-  overflow-y: auto;
+  overflow: auto;
+  color: orange;
+  font-family: Cursive;
+}
+
+.post .postAuthor {
+ 
   color: blue;
+  display: inline-block;
+  font-style: italic;
+}
+
+.post .postAuthorContainer {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 10px;
 }
 
 .cpContainer {
@@ -285,6 +321,7 @@ textarea {
 .inputCtsGp textarea {
   height: 100px;
   width: 400px;
+  border-color: #1161ed;
 }
 
 .cpContainer button {
@@ -304,7 +341,7 @@ textarea {
 }
 
 .comment {
-  
+  margin: 20px;
   margin-bottom: 28px;
 }
 
@@ -327,8 +364,49 @@ textarea {
 }
 
 .comment-btn-right {
-  text-align: right;
+  
+  text-transform: uppercase;
 }
+
+/* .comment-btn-right {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: right;
+  text-decoration: none;
+} */
+
+/* .comment-btn-right {
+  background-color: #0095ff;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  box-shadow: rgba(255, 255, 255, .4) 0 1px 0 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.15385;
+  margin: 0;
+  outline: none;
+  padding: 8px .8em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+} */
+
 
 .comment-image-container {
   margin-right: 2px;
@@ -392,6 +470,21 @@ textarea {
 .text:focus + span {
   opacity: 0.6;
 }
+
+.write {
+  background-color: #1161ed;
+  color: #FFF;
+  width: 9%;
+  padding: 10px 20px;
+  display: block;
+  height: 39px;
+  border-radius: 20px;
+  margin-top: 30px;
+  transition: all 0.5s ease-in-out;
+  border: none;
+  text-transform: uppercase;
+}
+
 .signin {
   background-color: #1161ed;
   color: #FFF;
@@ -416,9 +509,11 @@ textarea {
   outline: none;
 }
 
-input {
+/* input {
   display: inline-block;
   padding-top: 20px;
   font-size: 14px;
-}
+} */
+
+
 

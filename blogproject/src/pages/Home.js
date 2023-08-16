@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function Home() {
 
@@ -24,18 +25,23 @@ function Home() {
     return <div className="homePage"> 
     {
         postLists.map((post) => {
-            return <div className="post">{""}
+            return <div key={post.id} className="post">
             <div className="postHeader">
                 <div className="title"> <h1> {post.title} </h1></div>
 
             </div>
+            <div className="postBody">
             <div className="postTextContainer"> {post.body} </div>
-            <h3>@{post.postAuthor}  </h3>
-            <div className="comment-btn-right"><button onClick={commentfn}>Comments</button></div>
-                </div>
+            <div className="postAuthorContainer">
+            <div className="postAuthor">By {post.postAuthor}  </div>
+            <i class="far fa-comment-alt" onClick={commentfn} style={{ color: 'blue' , marginLeft: '30px', fontSize: '20px'}} ></i>
+            </div>
+            </div>
+            </div>
+                
 
             
-            
+             
         }
 
         )

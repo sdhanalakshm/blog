@@ -10,6 +10,7 @@ import { useState } from 'react';
 import { signOut } from 'firebase/auth';
 
 import { auth } from './firebase-config';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function App() {
 
@@ -27,14 +28,15 @@ function App() {
 
   return (<Router>
     <nav>
-      <Link to="/"> Home </Link>
+      <Link style={{ color: 'blue' }} to="/"> Home </Link>
       
-      {!isAuth ? <Link to="/login"> Login </Link> : 
+      {!isAuth ? <Link style={{ color: 'blue' }} to="/login"> Login </Link> : 
       (
         <>
-          <Link to="/myblog"> MyBlog </Link>
-          <Link to="/createpost"> CreatePost </Link>
-          <button onClick={signUserOut}> Log Out</button>
+          <Link style={{ color: 'blue', marginRight: '10px' }} to="/myblog"> MyBlog </Link>
+          <Link style={{ color: 'blue' }} to="/createpost"> CreatePost </Link>
+          <i style={{marginLeft: '30px' }} class="fa fa-sign-out" onClick={signUserOut}></i>
+          <div style={{ marginLeft: '10px' }}>Logged in as: {localStorage.getItem("userName")}</div>
         </>
       )}
     </nav>
